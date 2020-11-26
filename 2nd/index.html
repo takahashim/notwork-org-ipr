@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>2nd-index.rd</title>
+<link href="http://www.notwork.org/ipr/ipr.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Rubyではじめるインターネットプログラミング</a></h1><!-- RDLabel: "Rubyではじめるインターネットプログラミング" -->
+<h1><a name="label:1" id="label:1">掲載プログラム(第2回)</a></h1><!-- RDLabel: "掲載プログラム(第2回)" -->
+<p><a href="http://www.cqpub.co.jp/">CQ出版</a>の隔月刊誌<a href="http://www.cqpub.co.jp/od/">『オープンデザイン』</a>に連載中の<a href="http://www.notwork.org/ipr/">『Rubyではじめるインターネットプログラミング』</a> 
+に掲載されたプログラムです。これらのプログラムの利用および再配布の条件
+は<a href="http://www.ruby-lang.org/ja/LICENSE.txt">Rubyのライセンス</a> 
+に準拠します。</p>
+<h2><a name="label:2" id="label:2">第2回 HTTP</a></h2><!-- RDLabel: "第2回 HTTP" -->
+<p>No.39 (2000年6月28日発売)に掲載</p>
+<h3><a name="label:3" id="label:3">記事の目次</a></h3><!-- RDLabel: "記事の目次" -->
+<ul>
+<li>まえがき</li>
+<li>前回のおさらい</li>
+<li>HTTPを見る</li>
+<li>RubyのHTTPライブラリ</li>
+<li>Hypertext Transfer Protocol -- HTTP/1.1</li>
+<li>RubyのHTTPライブラリその2(http-access)</li>
+<li>HTML</li>
+<li>HTML関連ライブラリ</li>
+<li>おわりに</li>
+</ul>
+<h3><a name="label:4" id="label:4">モニタリングユーティリティ</a></h3><!-- RDLabel: "モニタリングユーティリティ" -->
+<ul>
+<li><a href="httprequestview.rb">httprequestview.rb</a> 
+    ユーザエージェントから送られたHTTPの要求をHTML形式で返すサーバ．</li>
+<li><a href="leakproxy.rb">leakproxy.rb</a>
+    ユーザエージェントとプロクシの間に入り，中継内容を標準出力にダンプする．</li>
+</ul>
+<h3><a name="label:5" id="label:5">ユーザエージェント</a></h3><!-- RDLabel: "ユーザエージェント" -->
+<p>これらは要<a href="http://www.ruby-lang.org/en/raa-list.rhtml?name=uri.rb">uri.rb</a>．</p>
+<ul>
+<li><a href="httpget-nh.rb">httpget-nh.rb</a>
+    前回の<a href="../1st/httpget.rb">httpget.rb</a>をNet::HTTPで書き直したもの．</li>
+<li><a href="httpget-nh2.rb">httpget-nh2.rb</a>
+    <a href="httpget-nh.rb">httpget-nh.rb</a>の改良版．
+    レスポンスを処理し，<a href="http://www.ruby-lang.org/">&lt;URL:http://www.ruby-lang.org/&gt;</a>にも
+    エラー無しでアクセスできるようになった．</li>
+<li><a href="httpget-nh3.rb">httpget-nh3.rb</a>
+    <a href="httpget-nh.rb">httpget-nh.rb</a>の別の改良版．
+    プロクシに対応し，レスポンスで例外を上げない<code>HTTP#get2</code>を使って
+    アクセス．</li>
+<li><a href="httphead.rb">httphead.rb</a>
+    GETではなくHEAD要求を出す．</li>
+<li><a href="httpget-ha.rb">httpget-ha.rb</a>
+    前回の<a href="../1st/httpget.rb">httpget.rb</a>をHTTPAccessで書き直したもの．
+    要<a href="http://www.ruby-lang.org/en/raa-list.rhtml?name=http-access">http-access</a>．</li>
+</ul>
+<h3><a name="label:6" id="label:6">HTTP</a></h3><!-- RDLabel: "HTTP" -->
+<ul>
+<li><a href="location.rb">location.rb</a>
+    引数で指定された固定URIにリダイレクトさせるだけのサーバ．</li>
+</ul>
+<h3><a name="label:7" id="label:7">HTML</a></h3><!-- RDLabel: "HTML" -->
+<ul>
+<li><a href="my-html-parser.rb">my-html-parser.rb</a>
+    SGMLPerserを使ってHTML文書の各A要素の属性とその値を表示する例．
+    要<a href="http://www.ruby-lang.org/en/raa-list.rhtml?name=html-parser">html-perser</a>．</li>
+<li><a href="simplehtmlparse-sample.rb">simplehtmlperse-sample.rb</a></li>
+<li><a href="simplehtmlparse-sample2.rb">simplehtmlperse-sample2.rb</a>
+    SimpleHtmlPerseを使ってHTML文書の各A要素のHREF属性と各IMG要素のSRC属性を
+    抜き出す例．
+    要<a href="http://arika.org/ruby/SimpleHtmlParse.html">SimpleHtmlPerse</a></li>
+<li><a href="tagiter-sample.rb">tagiter-sample.rb</a>
+    tagiterを使って<a href="http://www.infoseek.co.jp">Infoseek</a>の検索結果を
+    解析する例(<a href="http://www.threeweb.ad.jp/~nyasu/software/ruby.html#tagiter">&lt;URL:http://www.threeweb.ad.jp/~nyasu/software/ruby.html#tagiter&gt;</a>にあるものの改造版)．
+    要<a href="http://www.ruby-lang.org/en/raa-list.rhtml?name=tagiter">tagiter</a>．</li>
+</ul>
+<h3><a name="label:8" id="label:8">その他</a></h3><!-- RDLabel: "その他" -->
+<ul>
+<li><a href="rfclength.rb">rfclength.rb</a>
+    rfc-index.txtの各項目を調べてファイルサイズの大きい順にRFC番号と
+    バイト数を表示する．</li>
+<li><a href="rfclength2.rb">rfclength2.rb</a>
+    上の<a href="rfclength.rb">rfclength.rb</a>の高速化版．</li>
+</ul>
+<hr>
+<p align="right">
+<a href="http://www.ruby-lang.org/"><img src="http://www.notwork.org/icons/ruby.gif" alt="[Ruby]" align="left"></a>
+著者(50音順): 後藤謙太郎、後藤裕蔵、高橋征義、渡辺哲也<br>
+御意見，御感想，御批判の宛先: ipr-feedback@notwork.org<br>
+</p>
+
+
+</body>
+</html>

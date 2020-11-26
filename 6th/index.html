@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>6th-index.rd</title>
+<link href="http://www.notwork.org/ipr/ipr.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Rubyではじめるインターネットプログラミング</a></h1><!-- RDLabel: "Rubyではじめるインターネットプログラミング" -->
+<h1><a name="label:1" id="label:1">掲載プログラム(第6回)</a></h1><!-- RDLabel: "掲載プログラム(第6回)" -->
+<p><a href="http://www.cqpub.co.jp/">CQ出版</a>の隔月刊誌<a href="http://www.cqpub.co.jp/od/">『オープンデザイン』</a>に連載中の<a href="http://www.notwork.org/ipr/">『Rubyではじめるインターネットプログラミング』</a> 
+に掲載されたプログラムです。これらのプログラムの利用および再配布の条件
+は<a href="http://www.ruby-lang.org/ja/LICENSE.txt">Rubyのライセンス</a> 
+に準拠します。</p>
+<h2><a name="label:2" id="label:2">第6回 サーバ(後編) -- HTTPサーバツールキットWEBrick</a></h2><!-- RDLabel: "第6回 サーバ(後編) &shy;&shy; HTTPサーバツールキットWEBrick" -->
+<p>2001年1月号 (2000年11月24日発売)に掲載</p>
+<h3><a name="label:3" id="label:3">記事の目次</a></h3><!-- RDLabel: "記事の目次" -->
+<ul>
+<li>はじめに</li>
+<li><p>前回のおさらい</p>
+<ul>
+<li>なぜサーバを書くのか</li>
+</ul></li>
+<li>今回の流れ</li>
+<li><p>HTTPについて</p>
+<ul>
+<li>HTTPのバージョンについて</li>
+<li>メディアタイプ</li>
+<li>永続的接続</li>
+<li>チャンク形式エンコーディング</li>
+<li>バイトレンジリクエスト</li>
+<li>Cache-Control</li>
+<li>コンテンツネゴシエーション</li>
+<li>認証について</li>
+</ul></li>
+<li><p>HTTPサーバを作ろう</p>
+<ul>
+<li>名前を付けよう</li>
+<li>方針を決めよう</li>
+</ul></li>
+<li>WEBrickモジュールの構成</li>
+<li>WEBrickの使用例</li>
+<li>まとめ</li>
+<li>参考資料</li>
+<li>コラム「複数ポートの待ち受け」</li>
+</ul>
+<h3><a name="label:4" id="label:4">WEBrickモジュールの構成より</a></h3><!-- RDLabel: "WEBrickモジュールの構成より" -->
+<ul>
+<li><a href="webrick.rb">webrick.rb</a>
+    - WEBrick全体を読み込むためのファイル</li>
+<li><a href="httprequest.rb">httprequest.rb</a>
+    - 受信したリクエストを管理するためのクラス．
+    new(socket) でオブジェクトの作成， parse() で
+    socketから送られてきたデータの解釈を行っている．
+    解釈の結果は status()，method()，host()などの
+    各メソッドで参照する．</li>
+<li><a href="httpresponse.rb">httpresponse.rb</a>
+    - 送信する応答を管理するクラス．Content-Lengthや
+    Content-Typeなど，のエンティティヘッダの調整を自動
+    的に行なう．生成時に指定されたHTTPRequestのヘッダの
+    内容による調整も行なう．</li>
+<li><a href="httpserver.rb">httpserver.rb</a>
+    - ソケットから送られてきたデータ列をリクエストとして解釈し，
+    対応するレスポンスを返す．</li>
+<li><a href="httpstatus.rb">httpstatus.rb</a>
+    - RFC2616で規定されているステータスを取り扱うためのモジュールや，
+    ステータスに対応した例外オブジェクト，メッセージを管理する．
+    ステータスコードとステータスメッセージの関連づけにはHashを
+    使っている．</li>
+<li><a href="httputils.rb">httputils.rb</a>
+    - パスやURIの解釈など，他に分類しにくいHTTP関係の
+    ユーティリティを提供するモジュール．これらの
+    ユーティリティは HTTPServer クラスなどで使われている．</li>
+<li><a href="httpdate.rb">httpdate.rb</a>
+    - RFC2616で規定されている3種類の日付フォーマットを解釈し，
+    RFC1123フォーマットで出力する機能を提供するモジュール．</li>
+<li><a href="serverutils.rb">serverutils.rb</a>
+    - HTTPとは直接関係しない，サーバの実行に関する部分を
+    扱うための機能を提供するモジュール．</li>
+<li><a href="config.rb">config.rb</a>
+    - 設定によって変更される変数や定数を管理するため名前空間を
+    提供するモジュール．WEBrickの設定は WEBrick::Config という
+    モジュール内に全て納める方針になっている．</li>
+<li><a href="log.rb">log.rb</a>
+    - ログ出力機能を提供するクラス．new(filename, level) で
+    ログオブジェクトの生成，log(level，msg)でログの出力，
+    close()でログの終了を行う．</li>
+</ul>
+<h3><a name="label:5" id="label:5">WEBrickの使用例より</a></h3><!-- RDLabel: "WEBrickの使用例より" -->
+<ul>
+<li><a href="cvsweb.rb">cvsweb.rb</a>
+    - CVSのリポジトリを参照するWEBサーバのサンプル．</li>
+</ul>
+<h3><a name="label:6" id="label:6">コラム「複数ポートの待ち受け」より</a></h3><!-- RDLabel: "コラム「複数ポートの待ち受け」より" -->
+<ul>
+<li><a href="tiny_inetd.rb">tiny_inetd.rb</a>
+    - 簡易版inetd．selectによる接続要求判定のサンプル．</li>
+</ul>
+<hr>
+<p align="right">
+<a href="http://www.ruby-lang.org/"><img src="http://www.notwork.org/icons/ruby.gif" alt="[Ruby]" align="left"></a>
+著者(50音順): 後藤謙太郎、後藤裕蔵、高橋征義、渡辺哲也<br>
+御意見，御感想，御批判の宛先: ipr-feedback@notwork.org<br>
+</p>
+
+
+</body>
+</html>

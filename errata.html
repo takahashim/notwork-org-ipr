@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>errata.rd</title>
+<link href="http://www.notwork.org/ipr/ipr.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Rubyではじめるインターネットプログラミング</a></h1><!-- RDLabel: "Rubyではじめるインターネットプログラミング" -->
+<h1><a name="label:1" id="label:1">正誤表</a></h1><!-- RDLabel: "正誤表" -->
+<p><a href="http://www.cqpub.co.jp/">CQ出版</a>の隔月刊誌<a href="http://www.cqpub.co.jp/od/">『オープンデザイン』</a>に連載中の<a href="http://www.notwork.org/ipr/">『Rubyではじめるインターネットプログラミング』</a> 
+に関する正誤表です．</p>
+<h2><a name="label:2" id="label:2">第2回 クライアント(前編) -- ステートレスなプロトコルの代表 HTTP</a></h2><!-- RDLabel: "第2回 クライアント(前編) &shy;&shy; ステートレスなプロトコルの代表 HTTP" -->
+<h3><a name="label:3" id="label:3">誤りの訂正</a></h3><!-- RDLabel: "誤りの訂正" -->
+<ul>
+<li><p>p.67 httpget-nh2.rbの21行目</p>
+<pre>|  誤) / ([A-Za-z]+) /
+|  正) /([A-Za-z]+)/</pre></li>
+<li><p>p.69 httpget-nh3.rbの28行目</p>
+<pre>|  誤) / ([A-Za-z]+) /
+|  正) /([A-Za-z]+)/</pre></li>
+<li><p>p.71 下から3段落目の1行目</p>
+<pre>|  誤) RFC2026
+|  正) RFC2068</pre></li>
+<li><p>p.74 下から3段落目の下から3行目</p>
+<pre>|  誤) コラム(ABNF)
+|  正) (コラムABNF)</pre></li>
+<li><p>p.75 HTTPメッセージ</p>
+<pre>|  誤) Requiest
+|  正) Request</pre></li>
+<li><p>p.76 コメント</p>
+<pre>|  誤) ; coment
+|  正) ; comment</pre></li>
+<li><p>p.77 繰り返し</p>
+<pre>|  誤) 前者は0個以上の
+|  正) 後者は0個以上の</pre></li>
+<li><p>p.77 コラムの最後から3行目</p>
+<pre>|  誤) '.'
+|  正) `...'</pre></li>
+<li><p>p.77 下から2行目</p>
+<pre>|  誤) message-headre
+|  正) message-header</pre></li>
+<li><p>p.85 地の文2箇所</p>
+<pre>|  誤) /www/sub/domain
+|  正) /www/subdomain</pre></li>
+<li><p>p.89 DOCTYPE宣言</p>
+<pre>|  誤) 上記の宣言の内容は，この....
+|      ....します．
+|        というような意味だ．
+|  正) 上記の宣言の内容は，「この....
+|      ....します」というような意味だ．</pre></li>
+<li><p>p.90 下から5行目</p>
+<pre>|  誤) HTTP-EQIV
+|  正) HTTP-EQUIV</pre></li>
+<li><p>p.91 HTML, HEAD, BODY要素; HTML文書の例</p>
+<pre>|  誤) HTMLのサンプルです．
+|  正) &lt;P&gt;HTMLのサンプルです．&lt;/P&gt;</pre></li>
+<li><p>p.92 LINK要素</p>
+<pre>|  誤) 指定するのに用いらる．
+|  正) 指定するのに用いられる．</pre></li>
+<li><p>p.92 IMG, OBJECT要素</p>
+<pre>|  誤) &lt;IMG SRC=".....errata.html"&gt;正誤表&lt;/a&gt;
+|  正) &lt;IMG SRC=".....errata.png"&gt;</pre></li>
+<li><p>p.93 BASE要素; HTML文書の例</p>
+<pre>|  誤) &lt;A HREF="test.html"&gt;テスト&lt;/A&gt;
+|  正) &lt;P&gt;&lt;A HREF="test.html"&gt;テスト&lt;/A&gt;&lt;/P&gt;</pre></li>
+<li><p>p.98からp.100</p>
+<pre>|  誤) タグ名
+|  正) 要素名</pre></li>
+</ul>
+<p>(前回につづき，今回も多くの誤植を指摘してくださったZnZさんに感謝します)</p>
+<HR>
+<h2><a name="label:4" id="label:4">第1回 インターネットプログラミングことはじめ</a></h2><!-- RDLabel: "第1回 インターネットプログラミングことはじめ" -->
+<h3><a name="label:5" id="label:5">誤りの訂正</a></h3><!-- RDLabel: "誤りの訂正" -->
+<ul>
+<li><p>p.39 2箇所のコード片で<a name="footmark:1" id="footmark:1" href="#foottext:1"><sup><small>*1</small></sup></a></p>
+<pre>|  誤) \d:
+|  正) \d+</pre></li>
+<li><p>p.55 コラム「クラス紹介」右段</p>
+<pre>|  誤) |は，どちらにも含まれる要素を返します．
+|  正) |は，どちらかに含まれる要素を返します．</pre></li>
+<li><p>p.58 上から2行目</p>
+<pre>|  誤) whileの構文などはコラム制御文に詳しい．
+|  正)</pre>
+<p># 「<a href="1st/column_control.html">コラム制御文</a>」が紙面の都合でボツになったのでした(汗；</p></li>
+<li><p>p.58 上から4行目</p>
+<pre>|  誤) 例えば「\r」(LF)
+|  正) 例えば「\r」(CR)</pre></li>
+<li><p>p.69 「connectする版」プログラムのキャプション</p>
+<pre>|  誤) udp_echo_server.rb
+|  正) udp_echo_by_connect.rb</pre></li>
+<li><p>p.70 プログラムリスト `toy_http_server.rb' 2行目</p>
+<pre>|  誤) Usage: ruby httpserv.rb (port)
+|  正) Usage: ruby toy_http_server.rb (port)</pre></li>
+<li><p>p.72 コラム「マニュアルをセットアップ」右段2行目</p>
+<pre>|  誤) file:/home/httpd/html/ doc/ruby-man-1.4-jp/index.html
+|  正) file:/home/httpd/html/doc/ruby-man-1.4-jp/index.html</pre></li>
+<li><p>p.75 参考資料<a name="footmark:2" id="footmark:2" href="#foottext:2"><sup><small>*2</small></sup></a></p>
+<pre>|  誤) オブジェクト指向スクリプティング言語 Ruby
+|  正) オブジェクト指向スクリプト言語 Ruby</pre></li>
+</ul>
+<h3><a name="label:6" id="label:6">誤りではないけれど…</a></h3><!-- RDLabel: "誤りではないけれど…" -->
+<ul>
+<li><p>httpget.rb で使っているURLの正規表現は</p>
+<pre>|     %r!http://(.*?)(?::(\d+))?(/.*)!</pre>
+<p>ではなく    </p>
+<pre>|     %r!http://(.+?)(?::(\d+))?(/.*)!</pre>
+<p>にしたほうがよいという指摘がありました(最初の括弧を「.*?」から
+「.+?」にする)．これならば，無意味な接頭辞「http:///」を
+持つURLにマッチしません．</p></li>
+<li>p.54右段 コラム「クラス紹介」で「スペース文字」と書かれていますが，
+   <a href="http://www.ruby-lang.org/ja/man-1.4/String.html">マニュアル</a>
+   には「空白文字」と書かれています．</li>
+<li><p>pp.55-56のコラム「クラス紹介」では，部分文字列の切りの例として</p>
+<pre>|    str = '0123456789'
+|    str[1,2]  # "12"
+|    str[1..2] # "12"</pre>
+<p>という例を挙げています．しかし，次の方が分かりやすいだろうという
+指摘がありましたので紹介します．</p>
+<pre>|    str = '0123456789'
+|    str[2,3]  # "234"  2文字目から数えて3文字
+|    str[2..3] # "23"   2文字目から3文字目</pre></li>
+<li><p>p.61の httpget.c では httpget.rbと違ってURLの正規表現が</p>
+<pre>|    %r!http://([^/:]+)(?:(\d+))?(.+)!</pre>
+<p>相当になってるという指摘がありました．その通りです．</p></li>
+<li>p.67の tcp_echo_server_*.rb で無限ループに 
+   while TRUE を使っていますが，今では while true ほうが
+   良いでしょう．定数 TRUE は過去との互換性のために存在します．</li>
+<li><p>p.73からはじまる getrfc.rb の3行目は</p>
+<pre>|    require "ftplib"</pre>
+<p>になっていますが，Ruby 1.4.4 以降では ftplib.rb は互換性のために存
+在するものです(執筆当時の最新版は 1.4.3 でした)．この行を次の2行で
+書き換えると良いでしょう．</p>
+<pre>|    require "net/ftp"
+|    include Net</pre></li>
+</ul>
+<hr>
+<p align="right">
+<a href="http://www.ruby-lang.org/"><img src="http://www.notwork.org/icons/ruby.gif" alt="[Ruby]" align="left"></a>
+著者(50音順): 後藤謙太郎、後藤裕蔵、高橋征義、渡辺哲也<br>
+御意見，御感想，御批判の宛先: ipr-feedback@notwork.org<br>
+</p>
+
+<hr />
+<p>
+<a name="foottext:1" id="foottext:1" href="footmark:1"><sup><small>*1</small></sup></a><small> <a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/22141">[ruby-list:22141]</a> </small><br />
+<a name="foottext:2" id="foottext:2" href="footmark:2"><sup><small>*2</small></sup></a><small> <a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/22140">[ruby-list:22140]</a> </small><br />
+</p>
+</body>
+</html>

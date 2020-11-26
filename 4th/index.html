@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>4th-index.rd</title>
+<link href="http://www.notwork.org/ipr/ipr.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Rubyではじめるインターネットプログラミング</a></h1><!-- RDLabel: "Rubyではじめるインターネットプログラミング" -->
+<h1><a name="label:1" id="label:1">掲載プログラム(第4回)</a></h1><!-- RDLabel: "掲載プログラム(第4回)" -->
+<p><a href="http://www.cqpub.co.jp/">CQ出版</a>の隔月刊誌<a href="http://www.cqpub.co.jp/od/">『オープンデザイン』</a>に連載中の<a href="http://www.notwork.org/ipr/">『Rubyではじめるインターネットプログラミング』</a> 
+に掲載されたプログラムです。これらのプログラムの利用および再配布の条件
+は<a href="http://www.ruby-lang.org/ja/LICENSE.txt">Rubyのライセンス</a> 
+に準拠します。</p>
+<h2><a name="label:2" id="label:2">第4回 FTP</a></h2><!-- RDLabel: "第4回 FTP" -->
+<p>No.41 (2000年9月24日発売)に掲載</p>
+<h3><a name="label:3" id="label:3">記事の目次</a></h3><!-- RDLabel: "記事の目次" -->
+<ul>
+<li>はじめに</li>
+<li>FTPの歴史</li>
+<li><p>FTPの特徴</p>
+<ul>
+<li>Ethereal</li>
+<li>Passiveモード</li>
+<li>FTPのコマンド</li>
+<li>表現タイプ</li>
+</ul></li>
+<li>net/ftp.rb の紹介</li>
+<li><p>net/ftpの応用</p>
+<ul>
+<li>Fetchクラス</li>
+<li>HTML ファイルのアップロード</li>
+<li>ファイルをすべて get</li>
+</ul></li>
+<li>さらにFTPについて</li>
+<li>おわりに</li>
+<li>参考資料</li>
+<li><p>コラム find.rb の使い方</p>
+<ul>
+<li>簡単な使い方</li>
+<li>あるディレクトリの下をパスする方法</li>
+</ul></li>
+<li><p>コラム 再帰処理</p>
+<ul>
+<li>考え方</li>
+<li>ディレクトリを確認</li>
+</ul></li>
+</ul>
+<h3><a name="label:4" id="label:4">FTPの使い方</a></h3><!-- RDLabel: "FTPの使い方" -->
+<ul>
+<li><a href="ftp_sample1.rb">ftp_sample1.rb</a>
+    - リモートホストのログインディレクトリの一覧を表示する</li>
+<li><a href="ftp_sample2.rb">ftp_sample2.rb</a>
+    - 指定した資源をGETする</li>
+<li><a href="ftp_sample3.rb">ftp_sample3.rb</a>
+    - 指定した資源の種別やサイズを調べる</li>
+<li><a href="ftp_sample4.rb">ftp_sample4.rb</a>
+    - ディレクトリを再帰的に降下しリストを表示する</li>
+</ul>
+<h3><a name="label:5" id="label:5">Fetch</a></h3><!-- RDLabel: "Fetch" -->
+<ul>
+<li><a href="fetch.rb">fetch.rb</a>
+    - 汎用のファイル取得クラス。FTPとHTTPに対応。指定されたURLをGETする。</li>
+</ul>
+<h3><a name="label:6" id="label:6">FTPの実用アプリケーション</a></h3><!-- RDLabel: "FTPの実用アプリケーション" -->
+<ul>
+<li><a href="allget.rb">allget.rb</a>
+    - 指定されたディレクトリ以下のファイルをすべてGETする。</li>
+<li><a href="webup.rb">webup.rb</a>
+    - 更新されたファイルをすべてWebサイトにPUTする。</li>
+</ul>
+<h3><a name="label:7" id="label:7">コラム find.rb の使い方より</a></h3><!-- RDLabel: "コラム find.rb の使い方より" -->
+<ul>
+<li><a href="sample1_find.rb">sample1_find.rb</a>
+    - "/tmp" 以下のすべてのファイル名を表示する。</li>
+<li><a href="sample2_find.rb">sample2_find.rb</a>
+    - "/tmp" 以下の100kバイト以上のファイルの名前とサイズをすべて表示する。</li>
+<li><a href="sample3_find.rb">sample3_find.rb</a>
+    - シンボリックリンクされたディレクトリをスキップする。</li>
+</ul>
+<h3><a name="label:8" id="label:8">コラム 再帰処理より</a></h3><!-- RDLabel: "コラム 再帰処理より" -->
+<ul>
+<li><a href="sample1_recursive.rb">sample1_recursive.rb</a>
+    - 指定されたディレクトリにあるすべてのエントリを <code>p</code> する。</li>
+<li><a href="sample2_recursive.rb">sample2_recursive.rb</a>
+    - 指定されたディレクトリ以下にあるエントリをすべて <code>p</code> する。</li>
+</ul>
+<hr>
+<p align="right">
+<a href="http://www.ruby-lang.org/"><img src="http://www.notwork.org/icons/ruby.gif" alt="[Ruby]" align="left"></a>
+著者(50音順): 後藤謙太郎、後藤裕蔵、高橋征義、渡辺哲也<br>
+御意見，御感想，御批判の宛先: ipr-feedback@notwork.org<br>
+</p>
+
+
+</body>
+</html>

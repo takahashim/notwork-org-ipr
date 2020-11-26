@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3rd-index.rd</title>
+<link href="http://www.notwork.org/ipr/ipr.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1><a name="label:0" id="label:0">Rubyではじめるインターネットプログラミング</a></h1><!-- RDLabel: "Rubyではじめるインターネットプログラミング" -->
+<h1><a name="label:1" id="label:1">掲載プログラム(第3回)</a></h1><!-- RDLabel: "掲載プログラム(第3回)" -->
+<p><a href="http://www.cqpub.co.jp/">CQ出版</a>の隔月刊誌<a href="http://www.cqpub.co.jp/od/">『オープンデザイン』</a>に連載中の<a href="http://www.notwork.org/ipr/">『Rubyではじめるインターネットプログラミング』</a> 
+に掲載されたプログラムです。これらのプログラムの利用および再配布の条件
+は<a href="http://www.ruby-lang.org/ja/LICENSE.txt">Rubyのライセンス</a> 
+に準拠します。</p>
+<h2><a name="label:2" id="label:2">第3回 Telnet</a></h2><!-- RDLabel: "第3回 Telnet" -->
+<p>No.40 (2000年8月24日発売)に掲載</p>
+<h3><a name="label:3" id="label:3">記事の目次</a></h3><!-- RDLabel: "記事の目次" -->
+<ul>
+<li>はじめに</li>
+<li>ブロックとローカル変数</li>
+<li>TELNETプロトコル</li>
+<li>標準添付ライブラリ telnet.rb</li>
+<li>nif.rb の紹介</li>
+<li>セキュリティ</li>
+<li>おわりに</li>
+<li>参考資料</li>
+<li>コラム RubyとCGI</li>
+</ul>
+<h3><a name="label:4" id="label:4">モニタリングユーティリティ</a></h3><!-- RDLabel: "モニタリングユーティリティ" -->
+<ul>
+<li><a href="leakproxy.rb">leakproxy.rb</a>
+    - ユーザエージェントとプロクシの間に入り，中継内容を標準出力にダンプする．
+    <a href="../2nd/leakproxy.rb">前作</a>の改良版で，カスタマイズ出来るように
+    クラス化した．</li>
+<li><a href="parse_telnet.rb">parse_telnet.rb</a>
+    - leakproxy.rbを使ったTELNETに特化したモニタ．</li>
+</ul>
+<h3><a name="label:5" id="label:5">telnet.rb の利用例</a></h3><!-- RDLabel: "telnet.rb の利用例" -->
+<ul>
+<li><a href="telnet_new.rb">telnet_new.rb</a>
+    - <!-- Reference, RDLabel "Net::Telnet::new" doesn't exist --><em class="label-not-found">Net::Telnet::new</em><!-- Reference end -->のオプション(net/telnet.rbより抜粋)．</li>
+<li><a href="nif_sample1.rb">nif_sample1.rb</a>
+    - nif.rb の利用例(要nif.rb)．</li>
+<li><a href="nif_logcut.rb">nif_logcut.rb</a>
+    - nif_sample1.rb 等のログの利用例(要nif.rb)．</li>
+</ul>
+<h3><a name="label:6" id="label:6">スレッドとローカル変数の関係</a></h3><!-- RDLabel: "スレッドとローカル変数の関係" -->
+<ul>
+<li><a href="scopetest.rb">scopetest.rb</a>
+    - ローカル変数のスコープとブロックの関係．</li>
+<li><a href="th0.rb">th0.rb</a>
+    - 一見うまく動いているように見えるスレッド．</li>
+<li><a href="th1.rb">th1.rb</a>
+    - <a href="th0.rb">th0.rb</a>の弱点を露呈させる例．</li>
+<li><a href="th2.rb">th2.rb</a>
+    - スコープを使った<a href="th2.rb">th2.rb</a>の改良．</li>
+<li><a href="th3.rb">th3.rb</a>
+    - Queueを使った<a href="th2.rb">th2.rb</a>のやや偏執的な改良．</li>
+<li><a href="th4.rb">th4.rb</a>
+    - Ruby 1.5 以降の場合．</li>
+</ul>
+<h3><a name="label:7" id="label:7">コラム RubyとCGIより</a></h3><!-- RDLabel: "コラム RubyとCGIより" -->
+<ul>
+<li><a href="simplebbs.rb">simplebbs.rb</a>
+    簡易な BBS CGI．</li>
+</ul>
+<hr>
+<p align="right">
+<a href="http://www.ruby-lang.org/"><img src="http://www.notwork.org/icons/ruby.gif" alt="[Ruby]" align="left"></a>
+著者(50音順): 後藤謙太郎、後藤裕蔵、高橋征義、渡辺哲也<br>
+御意見，御感想，御批判の宛先: ipr-feedback@notwork.org<br>
+</p>
+
+
+</body>
+</html>
